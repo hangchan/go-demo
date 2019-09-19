@@ -4,6 +4,7 @@ expose:
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
   config:
+    domain: jx.dev.303net.net
     exposer: Ingress
     http: true
     tlsacme: false
@@ -16,6 +17,7 @@ cleanup:
     helm.sh/hook-delete-policy: hook-succeeded
 
 preview:
+  nameOverride: go-demo
   image:
     repository:
     tag:
